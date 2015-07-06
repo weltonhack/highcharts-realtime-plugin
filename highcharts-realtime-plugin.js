@@ -83,10 +83,6 @@ THE SOFTWARE.
 
 	H.updater = new H.Updater();
 
-	H.Chart.prototype.callbacks.push(function(chart) {
-		// invocado apos inicializacao de um chart
-	});
-
 	H.Chart.prototype.remake = function() {
 		var options = H.extend({}, this.options);
 		delete options.series;

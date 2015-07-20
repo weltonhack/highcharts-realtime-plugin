@@ -51,6 +51,10 @@ THE SOFTWARE.
 		};
 
 		priv.listener = function() {
+			if (Highcharts.charts.length == 0) {
+				return;
+			}
+			
 			if (priv.pointer >= Highcharts.charts.length) {
 				priv.pointer = 0;
 				if (++priv.cycle > pub.cycles) {
